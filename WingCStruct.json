@@ -1,0 +1,13 @@
+{
+    "Id" : "wingcstruct",
+    "Name" : "WingCStruct",
+    "Version" : "0.0.1",
+    "CompatVersion" : "0.0.1",
+    "Vendor" : "WingCloudStudio",
+    "VendorId" : "wingcloudstudio",
+    "Copyright" : "(C) WingCloudStudio",
+    "License" : "AGPL-v3.0",
+    "Description" : "Providing basic support for analyzing file structures",
+    "Url" : "https://github.com/Wing-summer/WingCStruct",
+    "DocumentationUrl" : ""
+}

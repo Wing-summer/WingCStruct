@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+name: Generate a list of contributors
+
+jobs:
+  contrib-readme-en-job:
+    runs-on: ubuntu-latest
+    name: A job to automate contrib in readme
+    steps:
+      - name: Contribute List
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
+        with:
+          readme_path: "README.md"
+        env:
+          GITHUB_TOKEN: ${{ secrets.CONTRIBUTORS_TOKEN }}
+  
