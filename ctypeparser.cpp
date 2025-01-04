@@ -85,9 +85,6 @@ void CTypeParser::initialize() {
     REGISTER_TYPE(qint64);
     REGISTER_TYPE(quint64);
 
-    REGISTER_TYPE(qint128);
-    REGISTER_TYPE(quint128);
-
     REGISTER_TYPE(qint16_le);
     REGISTER_TYPE(quint16_le);
     REGISTER_TYPE(qint32_le);

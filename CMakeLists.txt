@@ -18,6 +18,10 @@ endif()
 
 option(TEST_MODE TRUE)
 
+if(NOT EXISTS "${WINGHEX_SDK}")
+    message(FATAL_ERROR "Please config the SDK Path - WINGHEX_SDK")
+endif()
+
 set(PLUGIN_INTERFACE_FOUND FALSE)
 set(PLUGIN_SETPAGE_FOUND FALSE)
 if(EXISTS "${WINGHEX_SDK}/iwingplugin.h")
@@ -69,6 +73,11 @@ add_library(
 set_target_properties(WingCStruct PROPERTIES SUFFIX ".wingplg")
 
 if(TEST_MODE)
+    if(NOT EXISTS "${WINGHEX_PATH}")
+        message(
+            FATAL_ERROR "Please config the WingHexExplorer2 Path - WINGHEX_PATH"
+        )
+    endif()
     set(WINGHEX_PLUGIN_PATH "${WINGHEX_PATH}/plugin")
     add_custom_command(
         TARGET WingCStruct
