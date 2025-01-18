@@ -36,10 +36,6 @@ void WingCStruct::unload(std::unique_ptr<QSettings> &set) {
 
 const QString WingCStruct::pluginName() const { return tr("WingCStruct"); }
 
-const QString WingCStruct::pluginAuthor() const { return WingHex::WINGSUMMER; }
-
-uint WingCStruct::pluginVersion() const { return 1; }
-
 const QString WingCStruct::pluginComment() const {
     return tr("Providing basic support for analyzing file structures%");
 }
